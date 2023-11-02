@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    /* background: #efefef; */
+}
+
+.jr--body {
+    padding: 51px 22px 85px 22px;
+}
+
+.jr--body .head {
+    width: 100%;
+}
+
+
+.jr--body .head .welcome {
+    color: #47924B;
+    font-size: 14.5px;
+    font-family: Helvetica;
+}
+
+.jr--body .head .aname {
+    color: #1D2027;
+    font-size: 18px;
+    font-family: Helvetica;
+}
+
+.jr--body .circle {
+    background-color: #aaa;
+    width: 36px;
+    height: 36px;
+    float: right;
+    margin-top: -37px;
+    border-radius: 50%;
+}
+
+.jr--body .card-wrap {
+    float: left;
+    width: 100%;
+}
+
+.jr--body img {
+    width: 242px;
+    padding: 27px 0 10px 0;
+}
+
+.jr--body .card-wrap .chang {
+    float: right;
+    width: 35px;
+    height: 150px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 150;
+    border-radius: 10%;
+    background-color: #1D2027;
+    margin-top: 30px;
+}
+
+.jr--body .card-wrap ul {
+    display: flex;
+}
+
+.jr--body .card-wrap ul li {
+    width: 24px;
+    flex: 1;
+    text-align: center;
+    line-height: 40px;
+    padding: 5px 0;
+    border-radius: 20%;
+}
+
+.jr--body .card-wrap ul li div {
+    width: 60px;
+    height: 60px;
+    background: #EFF1F3;
+    border-radius: 20%;
+}
+
+.jr--body .card-wrap ul li p {
+    margin-left: -20px;
+}
+
+.jr--body .lists {
+
+    width: 100%;
+    height: 303px;
+}
+
+.jr--body .lists .cata {
+    font-size: 16px;
+}
+
+.jr--body .lists img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: -30px;
+}
+
+.jr--body .lists .rest {
+    margin-top: 30px;
+
+}
+
+.jr--body .lists .money {
+    float: right;
+    margin-top: -30px;
+    color: #EB5757;
+}
+
+.jr--footer {
+    width: 100%;
+    height: 83px;
+    border: 1px solid #000;
+    position: fixed;
+    bottom: 0;
+    background: white;
+}
+
+.jr--footer ul {
+    display: flex;
+    height: 100%;
+}
+
+.jr--footer ul li {
+    flex: 1;
+    text-align: center;
+    line-height: 83px;
+}
+
+li .iconfont {
+    font-size: 35px;
+}
