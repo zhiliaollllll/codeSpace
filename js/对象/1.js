@@ -1,5 +1,6 @@
 #对象
 //原始数据类型
+
 let a = 'hello'
 let b = 123
 let c = true
@@ -17,6 +18,9 @@ let obj = {
 }
 let lw = obj
 obj.name = '小红'
+
+console.log(lw.name)
+lw.name=xiaohong 
 obj
 内存泄漏
 obj对象的数据存储和栈

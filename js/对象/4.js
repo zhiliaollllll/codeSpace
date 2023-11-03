@@ -14,7 +14,7 @@ function Person(name, age, sex) {
 let p = new Person('海军', 18, 'boy')
 
 
-
+自己模拟
 function Person(name, age, sex) {
     var that = {}
     that.name = name
@@ -23,4 +23,4 @@ function Person(name, age, sex) {
 }
 
 let p1 = Person('程总', 18)
-let p2 = Person('程总', 18)
+let p2 = Person('子凡', 18)
