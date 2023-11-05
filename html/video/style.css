@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: #4c4c4c url('./1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 怎么判断一个元素是不是块级元素？
+不设置它的宽度，看它也没有平铺 */
+
+.wrapper {
+    display: flex;
+    width: 850px;
+}
+
+.speed {
+    flex: 1;
+    background: #fff;
+    margin: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+    /* 超出则看不见 */
+}
+
+.speed-bar {
+    width: 100%;
+    height: 16.3%;
+    background: linear-gradient(-170deg, #2376ae, #c16ecf 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
