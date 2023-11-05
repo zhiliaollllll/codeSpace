@@ -13,12 +13,12 @@ function flatten(arr) {
     return result
 }
 console.log(flatten(arr));
-判断数组
-arr instanceof Array(true)
-Array.isArray(arr)(true)
+// 判断数组
+// arr instanceof Array(true)
+// Array.isArray(arr)(true)
 
-合并数组
-let a = [1, 2], b = [3, 4]
-a.concat(b)
-[].concat(a, b)
-[...a,...b]
+// 合并数组
+// let a = [1, 2], b = [3, 4]
+// a.concat(b)
+// [].concat(a, b)
+// [...a,...b]

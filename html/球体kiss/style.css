@@ -19,15 +19,29 @@ body {
     border-radius: 50%;
     background-color: #fff;
     position: relative;
-
 }
+
+#r-ball {
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+
+/* 加绝对定位是相对于哪一个东西定位呢？ */
 
 .face {
     width: 70px;
     height: 30px;
-    border: 1px solid black;
     position: absolute;
+}
+
+.face-l {
     right: 0;
+    top: 30px;
+}
+
+.face-r {
+    left: 0;
     top: 30px;
 }
 
@@ -82,10 +96,10 @@ body {
 }
 
 #l-ball {
-    animation: close 4s ease infinite;
+    animation: close-l 4s ease infinite;
 }
 
-@keyframes close {
+@keyframes close-l {
     0% {
         transform: translate(0);
     }
@@ -104,5 +118,201 @@ body {
 
     100% {
         transform: translate(0);
+    }
+}
+
+.face-l {
+    animation: face-l 4s ease infinite;
+}
+
+@keyframes face-l {
+    0% {
+        transform: translate(0) rotate(0);
+    }
+
+    10% {
+        transform: translate(0) rotate(0);
+    }
+
+    20% {
+        transform: translate(5px) rotate(-2deg);
+    }
+
+    28% {
+        transform: translate(0) rotate(0);
+    }
+
+    35% {
+        transform: translate(5px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(0) rotate(0);
+    }
+
+    100% {
+        transform: translate(0) rotate(0);
+    }
+}
+
+#r-ball {
+    animation: close-r 4s ease infinite;
+}
+
+@keyframes close-r {
+    0% {
+        transform: translate(0);
+    }
+
+    35% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(-10px) rotate(-10deg);
+    }
+
+    80% {
+        transform: translate(-30px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+.face-r {
+    animation: face-r 4s ease infinite;
+}
+
+@keyframes face-r {
+    0% {
+        transform: translate(0) rotate(0);
+    }
+
+    10% {
+        transform: translate(0) rotate(0);
+    }
+
+    20% {
+        transform: translate(5px) rotate(-2deg);
+    }
+
+    28% {
+        transform: translate(0) rotate(0);
+    }
+
+    35% {
+        transform: translate(5px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translate(0) rotate(0);
+    }
+
+    100% {
+        transform: translate(0) rotate(0);
+    }
+}
+
+.kiss-t {
+    width: 15px;
+    height: 20px;
+    border-bottom: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    left: -15px;
+    right: -19px;
+    bottom: -10px;
+    transform: translate(0) rotate(90deg);
+}
+
+.kiss-b {
+    width: 15px;
+    height: 20px;
+    border-bottom: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    left: -15px;
+    right: -19px;
+    bottom: -20px;
+    transform: translate(0) rotate(90deg);
+}
+
+.kiss {
+    animation: kiss 4s ease infinite;
+}
+
+@keyframes kiss {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    28% {
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.mouth-alter {
+    animation: mouth-alter 4s ease infinite;
+}
+
+@keyframes mouth-alter {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
