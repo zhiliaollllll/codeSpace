@@ -1,41 +1,46 @@
-function foo() {
-    console.log(this.a);
-}
-var obj = {
-    a: 2,
-}
-foo()
-undefined//默认绑定
+// 1.
+// function foo() {
+//     console.log(this.a);
+// }
+// var obj = {
+//     a: 2,
+// }
+// foo()
+// undefined//默认绑定
 
 
-function foo() {
-    console.log(this.a);
-}
-var obj = {
-    a: 2,
-}
-foo.call(obj)
-2//显式绑定
+// 2.
+// function foo() {
+//     console.log(this.a);
+// }
+// var obj = {
+//     a: 2,
+// }
+// foo.call(obj)
+// 2//显式绑定
 
-function foo(n) {
-    console.log(this.a, n);
-}
-var obj = {
-    a: 2,
-}
-foo.call(obj, 100)
-2//显式绑定
+// 3.
+// function foo(n) {
+//     console.log(this.a, n);
+// }
+// var obj = {
+//     a: 2,
+// }
+// foo.call(obj, 100)
+// 2//显式绑定
 
 
-function foo(n) {
-    console.log(this.a, n);
-}
-var obj = {
-    a: 2,
-}
-foo.apply(obj, [100, 200])
-2//显式绑定
+// 4.
+// function foo(n) {
+//     console.log(this.a, n);
+// }
+// var obj = {
+//     a: 2,
+// }
+// foo.apply(obj, [100, 200])
+// 2//显式绑定
 
+5.
 function foo(n) {
     console.log(this.a, n);
 }

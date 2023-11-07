@@ -5,3 +5,4 @@ function foo(n) {
     }, 3000)
 }
 foo()
+undefined//默认绑定

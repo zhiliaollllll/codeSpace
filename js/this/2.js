@@ -6,7 +6,7 @@
 
 // foo()
 
-function foo() {  //[[scope]]
+function foo() {
     var b = 1;
     bar()
 }

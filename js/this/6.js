@@ -11,3 +11,5 @@ var baz = () => {
 }
 baz()
 // this是window的，只是指向全局
+
+
