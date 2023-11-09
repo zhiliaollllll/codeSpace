@@ -12,3 +12,4 @@ function flaten(arr) {
 字符串转数字型
 1.Number('1')
 2. + '1'
+
