@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <button id="btn">确定</button>
+    </div>
+    <script>
+        let wrapper = document.getElementById('wrapper')
+        let btn = document.getElementById('btn')
+        //给拜托你打上标签
+        const disabledElements = new WeakSet()
+        disabledElements.add(btn)
+        btn.addEventListener('click', () => {
+            wrapper.removeChild(btn)
+            console.log(disabledElements);
+        })
+    </script>
+</body>
+
+</html>
