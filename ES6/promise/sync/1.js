@@ -1,14 +1,14 @@
 //回调
-function a() {
+function a(cb) {
     setTimeout(() => {
-        console.log('阿真');
+        console.log('木木');
+        cb()
     }, 1000)
 }
 
 function b() {
     setTimeout(() => {
-        console.log('10亩地');
+        console.log('清华大学');
     }, 0)
 }
-a()
-b()
+a(b)
