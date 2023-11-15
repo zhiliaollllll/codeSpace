@@ -1,0 +1,93 @@
+/* douban 国内前端最强团队  所有css reset */
+/* 性能不好* {
+    margin: 0;
+    padding: 0;
+} */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* 业务样式 */
+html {
+    height: 100vh;
+    font-size: 10px;
+    background: url(./background.jpg) bottom center;
+    background-size: cover;
+}
+
+body,
+html {
+    font-family: sans-serif;
+}
+
+.keys {
+    /* 水平垂直居中 */
+    display: flex;
+    /* flex: 1; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.key {
+    /* 最好的适配  PC IPAD Phone*/
+    /* rem相对html根元素 font-size  1rem=10px */
+    /* 蓝湖 10px 方便换算*/
+    width: 10rem;
+    border: .4rem solid #ffffff;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    /* animation的简版 过渡动画 all只要这个元素任何一个样式改变，运用这个过渡动画*/
+    transition: all .07s ease;
+    text-align: center;
+    text-shadow: 0 0 .5rem #000;
+
+}
+
+.key:hover {
+    border-color: red;
+}
+
+.playing {
+    transform: scale(1.1);
+    /* translate rotate scale */
+    border-color: rgb(194, 234, 108);
+    box-shadow: 1rem 1rem 1rem rgb(194, 234, 108);
+}
+
+.key div {
+    font-size: 4rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    color: #ffc600;
+}
