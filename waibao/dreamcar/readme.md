@@ -35,3 +35,12 @@ app.json  应用配置
       -公用的样式
       -模块化
     -page.wxss 业务样式
+    -页面中比较独立的模块，读库css文件
+    -通用组件也可以
+    button/card都是组件
+    -通用的业务而也可以
+    。heros>.content>.header>.sub_header
+    维护花的时间更多，甚至不可维护
+-开发就是
+  -准备好数据
+  -写页面
