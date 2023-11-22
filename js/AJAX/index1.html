@@ -9,14 +9,15 @@
 
 <body>
     <button id="btn">新歌速递</button>
-    <ul>
+    <ul id="ul">
         <li>test</li>
     </ul>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         const btn = document.getElementById('btn')
         btn.addEventListener('click', () => {
             //朝网易云的服务器上的后端代码发一个http请求
-
+            $.ajax()
         })
     </script>
 </body>

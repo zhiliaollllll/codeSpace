@@ -32,3 +32,5 @@ ToPrimitive(obj,String)  ==> String({})
 # 二元运算符 +
 lprim + rprim
 ToPrimitive(v1) + ToPrimitive(v2)
+1. + 两边有一个是字符串，则按字符串进行拼接
+2.否则，转到 number 进行计算

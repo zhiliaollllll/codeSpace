@@ -11,5 +11,8 @@
 console.log(1 + '1');//'11'
 console.log(1 + 1);//2
 console.log('1' + '1');//11
-console.log(1 + null)//1
+console.log(1 + null)//1///null number一下是0
+console.log([] + [])//kong
+console.log([] + {})//'[object Object]'
+
 
