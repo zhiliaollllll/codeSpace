@@ -17,7 +17,9 @@
         const btn = document.getElementById('btn')
         btn.addEventListener('click', () => {
             //朝网易云的服务器上的后端代码发一个http请求
-            $.ajax()
+            $.ajax({
+                url: ''
+            })
         })
     </script>
 </body>
