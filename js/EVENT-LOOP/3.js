@@ -1,6 +1,6 @@
 console.log('script start')
 async function async1() {
-    await async2()
+    await async2()  //浏览器给await开小灶，它后面的那一行当成同步代码
     console.log('async1 end')
 }
 async function async2() {
