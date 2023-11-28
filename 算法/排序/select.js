@@ -4,7 +4,7 @@ let arr = [2, 3, 1, 4, 5]
 // })
 //会影响原数组
 
-function selectSort(arr) {
+function selectSort(arr) {  //不断缩小区间，在区间中找到最小值，放在区间左侧
     const len = arr.length
     let minIndex
     for (let i = 0; i < len; i++) {

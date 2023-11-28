@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <template id="my-app">
+        <!-- <div :class="className">紫金夜市</div>
+        <!-- 类名变化 -->
+        <!-- <div :class="{'active':isActive}">筠筠</div> -->
+        <!-- 只有一个属性，但时而有时而没有 -->
+        <!-- <button @click="change">切换</button> -->
+        <div :class="{'active':isActive,'title':true}">蛋总</div>
+        <div class="lang" :class="className">朗格</div>
+        <div class="baobao" :class="classObj">栩栩</div>
+        <div class="bb" :class="getClass()">羊羊宝宝</div>
+        <div :class="['feng','baby', className]">Dolphin</div>
+        <div :class="['wang',isActive?'active':'']">老王</div>
+        <div :class="['hengheng',{'active':isActive}]">杭杭</div>
+    </template>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        const App = {
+            template: '#my-app',
+            data() {
+                return {
+                    className: 'username',
+                    isActive: true,
+                    classObj: {
+                        active: true,
+                        title: true
+                    }
+
+                }
+            },
+            methods: {
+                change() {
+                    this.isActive = !this.isActive
+                },
+                getClass() {
+                    return 'yanyan'
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>
