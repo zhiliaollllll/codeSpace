@@ -7,5 +7,6 @@ var climbStairs = function (n) {
     }
     return a[n]
 };
+//找状态转移方程
 
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-image: url(./OIP-C\ \(2\).jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h2 {
+            border: 3px solid purple;
+        }
+
+        ul li {
+            border: 1px solid rgb(69, 214, 69);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <ul>
+    </ul>
+
+    <template id="my-app">
+        <h2>歌曲列表</h2>
+        <ul>
+            <li v-for="(item,index) in songs" :key="index">{{index+1}}--{{item}}
+                <a href="#" @click="del(index)">x</a>
+            </li>
+        </ul>
+    </template>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        const App = {
+            template: '#my-app',
+            data() {
+                return {
+                    songs: [
+                        '不能说的秘密',
+                        '等你下课',
+                        '说好不哭',
+                        '晴天',
+                        '青花瓷'
+                    ]
+                }
+            },
+            methods: {
+                del(i) {
+                    // console.log('删除', i);
+                    this.songs.splice(i, 1)
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app')
+    </script>
+</body>
+
+</html>
