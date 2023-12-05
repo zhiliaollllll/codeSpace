@@ -5,15 +5,15 @@
             <div class="city">切换城市 </div>
         </div>
         <div class="city-info">
-            <div class="city-name">南昌</div>
-            <p class="weather">大雪</p>
+            <div class="city-name">{{ weatherData.city }}</div>
+            <p class="weather">{{ weatherData.weather }}</p>
             <h2 class="temp">
-                <em>-10℃</em>
+                <em>{{ weatherData.temperature }}℃</em>
             </h2>
             <div class="detail">
-                <span>风力：6级</span> |
-                <span>风力：北风</span> |
-                <span>空气湿度：10%</span>
+                <span>风力：{{ weatherData.windPower }}</span> |
+                <span>风力：{{ weatherData.windDirection }}</span> |
+                <span>空气湿度：{{ weatherData.humidity }}</span>
             </div>
         </div>
     </div>
@@ -24,7 +24,8 @@ import AMapLoader from '@amap/amap-jsapi-loader';
 export default {
     data() {
         return {
-            localTime: '00:00'
+            localTime: '00:00',
+            weatherData: {}
         }
     },
     created() {
@@ -36,6 +37,7 @@ export default {
     },
     methods: {
         initAMap() {
+            let that = this;
             AMapLoader.load({
                 key: "5eeb4e71dbb89e6dfefcf793029751a4", // 申请好的Web端开发者Key，首次调用 load 时必填
                 version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
@@ -46,7 +48,19 @@ export default {
                     citySearch.getLocalCity(function (status, result) {
                         if (status === 'complete' && result.info === 'OK') {
                             // 查询成功，result即为当前所在城市信息
-                            console.log(result);
+                            console.log(result.city);
+
+                            //加载天气查询插件
+                            AMap.plugin('AMap.Weather', function () {
+                                //创建天气查询实例
+                                var weather = new AMap.Weather();
+
+                                //执行实时天气信息查询
+                                weather.getLive(result.city, function (err, data) {
+                                    console.log(err, data);
+                                    that.weatherData = data
+                                });
+                            });
                         }
                     })
                 })
