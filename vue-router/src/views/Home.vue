@@ -4,3 +4,5 @@
     <router-link to="/home/recommend">推荐</router-link>
     <router-view></router-view>
 </template>
+
+<style></style>
