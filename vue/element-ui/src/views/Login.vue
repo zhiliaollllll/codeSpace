@@ -37,6 +37,8 @@ export default {
             // console.log(this.$router);
             // 用js控制路由的跳转
             this.$router.push({ name: 'home', query: { user: this.account } })
+
+            //path/name,hash/query/params
         }
     }
 }

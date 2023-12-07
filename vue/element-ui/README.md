@@ -18,7 +18,9 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/). -->
 
-# 路由传参
+
+
+<!-- # 路由传参
 1.this.$router.push('/home/${this.account}')
 需要在路由配置中声明该路径可以携带参数  '/home/:user'
 
@@ -29,5 +31,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/). -->
 需要在路由配置中声明该路径可以携带参数  '/home/:user'
 
 4.this.$router.push({path:'/home',hash:{user:this.account}})
-参数前面会多一个#
+参数前面会多一个# -->
 
